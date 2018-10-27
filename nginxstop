@@ -1,0 +1,4 @@
+ps -ef | grep nginx | gawk '{print$2}' | while read line 
+do 
+   kill -s 9 $line 
+done
